@@ -1,0 +1,1099 @@
+/* Черный фон для всего меню */
+.navbar-dark.bg-custom-black {
+    background-color: #000000 !important;
+}
+
+/* ========== ФИКСИРОВАННАЯ ШАПКА ========== */
+.fixed-nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1030 !important;
+    background-color: #000000 !important;
+}
+
+/* Отступ для контента, чтобы не прятался под шапкой */
+body {
+    padding-top: 76px !important;
+}
+
+/* Стили для ссылок навигации (ГЛАВНОЕ МЕНЮ - белое) */
+.navbar-dark .navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+    padding-bottom: 8px !important;
+}
+
+/* Отступы между пунктами меню */
+.navbar-nav .nav-item {
+    margin-right: 1rem;
+}
+
+/* Стили для кнопок справа */
+.btn-outline-light-custom {
+    /* border: 1px solid white; */
+    color: white;
+    background: transparent;
+    border-radius: 5px;
+    transition: all 0.2s;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.btn-outline-light-custom:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.btn-red-custom {
+    background-color: #ff0000;
+    border: 2px solid #ff0000;
+    color: black;
+    border-radius: 5px;
+    transition: all 0.2s;
+    white-space: nowrap;
+    font-weight: bold;
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+}
+
+.btn-red-custom:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
+    color: black;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+/* Адаптивные отступы для кнопок */
+.right-buttons {
+    gap: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        margin-top: 1rem;
+    }
+    .right-buttons {
+        margin-top: 1rem;
+        justify-content: flex-start;
+    }
+    .navbar-nav .nav-item {
+        margin-right: 0;
+    }
+    body {
+        padding-top: 60px !important;
+    }
+}
+
+/* Стиль для контента */
+#page-content {
+    transition: all 0.3s ease;
+    min-height: 300px;
+    background: transparent !important;
+}
+
+/* ========== ФУТЕР (ПОДВАЛ) ========== */
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 50px 0 30px;
+    margin-top: 60px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.footer-logo:hover {
+    color: white;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: red;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 36px;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: red;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 30px;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+/* Прижимаем футер к низу */
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    background-image: 
+        radial-gradient(circle at 15% 30%, rgba(255, 255, 255, 0.05) 3px, transparent 3px),
+        radial-gradient(circle at 75% 60%, rgba(255, 255, 255, 0.04) 2px, transparent 2px),
+        radial-gradient(circle at 45% 85%, rgba(255, 255, 255, 0.06) 4px, transparent 4px),
+        radial-gradient(circle at 90% 15%, rgba(255, 255, 255, 0.03) 2px, transparent 2px),
+        radial-gradient(circle at 5% 70%, rgba(255, 255, 255, 0.05) 3px, transparent 3px);
+    background-size: 200px 200px, 150px 150px, 180px 180px, 120px 120px, 160px 160px;
+    background-repeat: repeat;
+}
+
+.footer {
+    margin-bottom: 0;
+    margin-top: auto;
+    background-color: #000000;
+}
+
+/* Стили для боковой панели выбора города */
+.city-option {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.city-option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.city-radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #666;
+    margin-right: 15px;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.city-radio.selected {
+    border-color: red;
+    background-color: red;
+}
+
+.city-radio.selected::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.city-name {
+    font-size: 16px;
+    color: white;
+    flex: 1;
+}
+
+.current-city {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.current-city-label {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.current-city-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid #333;
+}
+
+.offcanvas {
+    background-color: #0a0a0a;
+    color: white;
+    border-left: 1px solid #ff0000;   /* Красная рамка */
+    background-image: url('../img/bmenu4.jpg');  /* Путь к изображению */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+/* Дополнительный эффект - свечение рамки */
+.offcanvas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 1px;
+    height: 100%;
+    background: #8d8d8f;
+    animation: borderGlow 2s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* ========== ПРАВИЛЬНЫЕ ПОДЧЕРКИВАНИЯ ДЛЯ ГЛАВНОГО МЕНЮ ========== */
+
+/* При наведении на ЛЮБОЙ пункт меню - красное подчеркивание */
+.navbar-dark .navbar-nav .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    border-radius: 2px;
+}
+
+/* Для активного пункта "О нас" и "Контакты" - красное подчеркивание */
+.navbar-dark .navbar-nav .nav-link[data-page="about"].active::after,
+.navbar-dark .navbar-nav .nav-link[data-page="contacts"].active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    border-radius: 2px;
+}
+
+/* Для активного пункта "Сделать заказ" - НЕТ подчеркивания */
+.navbar-dark .navbar-nav .nav-link[data-page="order"].active::after {
+    display: none;
+}
+
+
+
+/* Увеличенный и жирный шрифт для городов */
+.city-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    flex: 1;
+}
+
+.city-radio {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #666;
+    margin-right: 15px;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.city-radio.selected {
+    border-color: red;
+    background-color: red;
+}
+
+.city-radio.selected::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.city-option {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    margin: 8px 0;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background 0.2s;
+}
+
+.city-option:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.offcanvas-title {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.current-city-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.current-city-label {
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* ========== СТИЛИ ДЛЯ 5 КВАДРАТОВ ========== */
+.home-layout {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 50px;
+    padding-top: 20px;  /* Добавьте эту строку */
+}
+
+.small-squares {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.big-square {
+    flex: 1;
+}
+
+.square-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #8d8d8f;
+    background-size: cover;
+    background-position: center;
+}
+
+.square-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.small-square {
+    aspect-ratio: 1 / 1;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.big-square {
+    aspect-ratio: 1 / 1;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* Текст внутри квадратов - жирный белый, внизу */
+.square-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.square-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.square-desc {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 8px 0 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* ========== СТИЛИ ДЛЯ ПОЛОСКИ КАТЕГОРИЙ (РЁБРА, СТРИТФУД И Т.Д.) ========== */
+.categories-bar {
+    background: #000000;
+    padding: 12px 0;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.categories-scroll {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scrollbar-width: none;  /* Скрываем скроллбар в Firefox */
+    -ms-overflow-style: none;  /* Скрываем скроллбар в IE/Edge */
+    padding-bottom: 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Скрываем скроллбар в Chrome/Safari/Opera */
+.categories-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+.categories-scroll::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+}
+
+.categories-scroll::-webkit-scrollbar-thumb {
+    background: #dc3545;
+    border-radius: 10px;
+}
+
+/* КАТЕГОРИИ - СЕРЫЕ, ПРИ ВЫДЕЛЕНИИ БЕЛЫЕ С ЯРКО-КРАСНЫМ ПОДЧЕРКИВАНИЕМ */
+.category-link {
+    color: #a0a0a0 !important;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    white-space: nowrap;
+    padding-bottom: 8px;
+    position: relative;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.category-link:hover {
+     color: white !important;
+}
+
+.category-link:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff0000;
+    border-radius: 2px;
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+}
+
+.category-link.active-category {
+    color: white !important;
+}
+
+.category-link.active-category::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff0000 !important;
+    border-radius: 2px;
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+}
+
+
+
+/* ========== СТИЛИ ДЛЯ КАРТОЧЕК ТОВАРОВ ========== */
+.categories-section {
+    margin-bottom: 40px;
+    scroll-margin-top: 160px;
+}
+
+.category-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    /* border-bottom: 3px solid #dc3545; */
+    display: inline-block;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.product-card {
+    background: rgba(20, 20, 30, 0.9);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-color: white;
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.product-desc {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* ========== СТИЛИ ДЛЯ СТРАНИЦ О НАС И КОНТАКТЫ ========== */
+.about-content, .contacts-content {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    padding: 40px;
+    color: white;
+}
+
+.about-content h2, .contacts-content h2 {
+    color: white;;
+    margin-bottom: 25px;
+}
+
+/* Заголовки всех страниц (О нас, Мерч, Карьера, Контакты) - белые */
+.about-content h2,
+.contacts-content h2,
+.about-content h3 {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.home-layout {
+    max-width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    
+    .category-title {
+        font-size: 1.5rem;
+    }
+    
+    .categories-scroll {
+        gap: 15px;
+    }
+    
+    .category-link {
+        font-size: 0.85rem;
+    }
+    
+    /* ========== КВАДРАТЫ НА МОБИЛЬНЫХ ========== */
+    .home-layout {
+        display: block;
+        width: 100%;
+    }
+    
+    /* 4 маленьких квадрата - сетка 2x2 */
+    .small-squares {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .small-squares .square-item {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+    
+    /* 1 большой квадрат - горизонтальная карусель (можно листать) */
+    .big-square {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+    }
+    
+    /* Контейнер для элементов внутри большой карусели */
+    .big-square .square-item {
+        display: block;
+        min-width: 85%;
+        scroll-snap-align: start;
+        aspect-ratio: 1 / 1;
+        margin-right: 12px;
+    }
+    
+    /* Стилизация полосы прокрутки для большого квадрата */
+    .big-square::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .big-square::-webkit-scrollbar-track {
+        background: rgba(255,255,255,0.1);
+        border-radius: 10px;
+    }
+    
+    .big-square::-webkit-scrollbar-thumb {
+        background: #ff0000;
+        border-radius: 10px;
+    }
+    
+    .categories-bar {
+        top: 60px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .square-title {
+        font-size: 1.4rem;  /* На мобильных чуть меньше */
+    }
+    
+    .square-desc {
+        font-size: 0.8rem;
+    }
+}
+
+/* ========== НОВЫЕ МАКЕТЫ ДЛЯ КВАДРАТОВ ========== */
+/* ========== НОВЫЕ МАКЕТЫ ДЛЯ КВАДРАТОВ ========== */
+/* ========== НОВЫЕ МАКЕТЫ ДЛЯ КВАДРАТОВ ========== */
+
+/* ========== НОВЫЕ МАКЕТЫ ДЛЯ КВАДРАТОВ ========== */
+
+.home-layout {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto 50px auto;
+    padding: 20px 10px 0 10px;
+}
+
+/* Вариант 1: Маленькие слева, большой справа */
+.layout-small-left {
+    flex-direction: row;
+}
+
+.layout-small-left .small-squares-container {
+    flex: 1;
+}
+
+.layout-small-left .small-squares-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.layout-small-left .big-square-container {
+    flex: 1;
+}
+
+/* Вариант 2: Большой слева, маленькие справа */
+.layout-big-left {
+    flex-direction: row;
+}
+
+.layout-big-left .big-square-container {
+    flex: 1;
+}
+
+.layout-big-left .small-squares-container {
+    flex: 1;
+}
+
+.layout-big-left .small-squares-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Вариант 3: 2 маленьких слева, БОЛЬШОЙ центр, 2 маленьких справа */
+.layout-center {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.layout-center .small-left-container,
+.layout-center .small-right-container {
+    flex: 0.5;  /* Уменьшаем боковые колонки */
+    display: flex;
+}
+
+.layout-center .small-squares-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.layout-center .small-squares-vertical .square-item {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.layout-center .big-square-container {
+    flex: 1;  /* Большой квадрат занимает столько же места, как и в других вариантах */
+}
+
+.layout-center .big-square-container .square-item {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+/* Общие стили для квадратов */
+.square-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #8d8d8f;
+    background-size: cover;
+    background-position: center;
+}
+
+.square-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.small-square {
+    aspect-ratio: 1 / 1;
+}
+
+.big-square {
+    aspect-ratio: 1 / 1;
+}
+
+.square-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.square-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.square-desc {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 8px 0 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    .home-layout,
+    .layout-small-left,
+    .layout-big-left,
+    .layout-center {
+        flex-direction: column !important;
+    }
+    
+    .small-squares-grid,
+    .small-squares-vertical {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px;
+    }
+    
+    .small-left-container,
+    .small-right-container,
+    .small-squares-container,
+    .big-square-container {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+    
+    .layout-center .small-squares-vertical {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px;
+        flex-direction: row !important;
+    }
+    
+    .square-title {
+        font-size: 1.4rem;
+    }
+    
+    .square-desc {
+        font-size: 0.8rem;
+    }
+}
+
+/* Сдвигаем логотип и меню левее */
+.container {
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.navbar .container {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+/* Для очень больших экранов */
+@media (min-width: 1400px) {
+    .navbar .container {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .navbar .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+/* Быстрое исправление - ссылки не растягиваются на всю ширину */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+        display: inline-block !important;
+        width: auto !important;
+    }
+    
+    .navbar-nav .nav-item {
+        display: inline-block !important;
+        width: auto !important;
+        margin-right: 20px !important;
+    }
+    
+    .navbar-collapse {
+        text-align: left;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .right-buttons {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+    
+    .right-buttons .btn {
+        flex: 1 1 calc(33% - 8px);
+        text-align: center;
+        font-size: 13px;
+        padding: 8px 5px !important;
+        white-space: normal !important;
+        word-break: keep-all;
+    }
+}
+/* ========== УВЕЛИЧЕННЫЙ ОТСТУП ДЛЯ КВАДРАТОВ НА МОБИЛЬНЫХ ========== */
+@media (max-width: 768px) {
+    /* Увеличиваем отступ контента от фиксированной шапки */
+    body {
+        padding-top: 75px !important;
+    }
+    /* Убираем нижний отступ у контейнера с квадратами */
+    .home-layout {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}  
+
+    
+/* ========== БЕГУЩАЯ СТРОКА (МАРАФОН) ========== */
+.marquee-container {
+    width: 100%;
+    background: linear-gradient(90deg, #000000, #1a0000, #000000);
+    border-top: 1px solid #ff000044;
+    border-bottom: 1px solid #ff000044;
+    margin: 0 0 40px 0;
+    padding: 14px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.marquee-content span {
+    display: inline-block;
+    margin: 0 35px;
+    color: #fff;
+}
+
+.marquee-content i {
+    color: #ff0000;
+    margin-right: 8px;
+}
+
+.marquee-content .highlight {
+    color: #ff4444;
+    font-weight: bold;
+}
+
+.marquee-content .offer {
+    background: rgba(255, 0, 0, 0.2);
+    padding: 5px 15px;
+    border-radius: 30px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Пауза при наведении */
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .marquee-container {
+        padding: 10px 0;
+        margin-bottom: 25px;
+    }
+    .marquee-content {
+        font-size: 0.85rem;
+        animation-duration: 20s;
+    }
+    .marquee-content span {
+        margin: 0 20px;
+    }
+}
