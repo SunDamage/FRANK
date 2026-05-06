@@ -99,51 +99,22 @@ document.addEventListener('DOMContentLoaded', function() {
         ]
     };
     
-    // + БЕГУЩАЯ СТРОКА: ФУНКЦИЯ ДЛЯ СОЗДАНИЯ МАРАФОНА (бегущей строки с акциями)
-    // Создает динамическую бегущую строку с акциями в зависимости от выбранного города
+ // + БЕГУЩАЯ СТРОКА: ФУНКЦИЯ ДЛЯ СОЗДАНИЯ МАРАФОНА (бегущей строки с фразой)
     function createMarquee() {
-        const city = currentCity;
+        // Русская часть, иконка рёбрышек Font Awesome, английская часть
+        const marqueeText = 'ПУТЬ К СЕРДЦУ ЛЕЖИТ ЧЕРЕЗ РЕБРА <i class="bi bi-star-fill" style="color: #ff0000; margin: 0 5px;"></i> THE WAY TO THE HEART IS THROUGH THE RIBS';
         
-        // + БЕГУЩАЯ СТРОКА: Данные акций для каждого города
-        const marqueeTexts = {
-            'Сургут': [
-                { icon: '🎉', text: 'Скидка 10% по промокоду FRANK10', highlight: '10%' },
-                { icon: '🍷', text: 'Винная карта - 15% по вторникам', highlight: '15%' },
-                { icon: '🎂', text: 'Бесплатный десерт в день рождения', highlight: 'Бесплатный' },
-                { icon: '🍕', text: 'Комбо-ланч с 12:00 до 16:00 - 499₽', highlight: '499₽' }
-            ],
-            'Тюмень': [
-                { icon: '🎁', text: 'Бесплатный десерт в день рождения', highlight: 'Бесплатный' },
-                { icon: '🍸', text: 'Счастливые часы 17:00-19:00', highlight: 'Счастливые часы' },
-                { icon: '🥩', text: 'Стейк в подарок при заказе от 3000₽', highlight: 'в подарок' }
-            ],
-            'Москва': [
-                { icon: '🍸', text: 'Happy Hour 17:00-19:00 - коктейли 299₽', highlight: '299₽' },
-                { icon: '🎭', text: 'Живая музыка каждую пятницу', highlight: 'Живая музыка' },
-                { icon: '🥂', text: 'Шампанское в подарок при брони от 4 персон', highlight: 'в подарок' }
-            ],
-            'Екатеринбург': [
-                { icon: '🏷', text: 'Комбо-ланч за 399₽', highlight: '399₽' },
-                { icon: '🍺', text: 'Пиво 0.5 + крылья = 499₽', highlight: '499₽' },
-                { icon: '🎸', text: 'Караоке по субботам', highlight: 'Караоке' }
-            ]
-        };
-        
-        // + БЕГУЩАЯ СТРОКА: Получаем акции для текущего города (или Сургут по умолчанию)
-        const texts = marqueeTexts[city] || marqueeTexts['Сургут'];
-        
-        // + БЕГУЩАЯ СТРОКА: Создаем 3 копии акций для бесконечной анимации
+        // Создаем 4 копии фразы для бесконечной анимации
         let items = '';
-        for (let i = 0; i < 3; i++) {
-            texts.forEach(item => {
-                items += `<span><i class="bi bi-star-fill"></i> ${item.icon} <span class="highlight">${item.highlight}</span>${item.text.replace(item.highlight, '')}</span>`;
-            });
+        for (let i = 0; i < 4; i++) {
+            items += `<span><i class="fas fa-utensils" style="color: #ff0000; margin-right: 10px;"></i> ${marqueeText} <i class="fas fa-utensils" style="color: #ff0000; margin-left: 10px;"></i></span>`;
         }
         
-        // + БЕГУЩАЯ СТРОКА: Возвращаем HTML структуру бегущей строки
         return `<div class="marquee-container"><div class="marquee-content">${items}</div></div>`;
     }
     
+    
+
     // Функция обновления активного пункта в главном меню
     function updateActiveNavLink(pageName) {
         const navLinksAll = document.querySelectorAll('#mainNav .nav-link');
