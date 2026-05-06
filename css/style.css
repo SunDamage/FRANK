@@ -1039,6 +1039,31 @@ body {
     position: relative;
 }
 
+/* Затемнение по бокам - СРЕДНИЙ ВАРИАНТ */
+.marquee-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background: linear-gradient(to right, #0a0a0a, #0a0a0a 15%, transparent);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marquee-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 180px;
+    height: 100%;
+    background: linear-gradient(to left, #0a0a0a, #0a0a0a 15%, transparent);
+    z-index: 2;
+    pointer-events: none;
+}
+
 .marquee-content {
     display: inline-block;
     white-space: nowrap;
@@ -1088,6 +1113,10 @@ body {
     .marquee-container {
         padding: 10px 0;
         margin-bottom: 25px;
+    }
+    .marquee-container::before,
+    .marquee-container::after {
+        width: 80px;
     }
     .marquee-content {
         font-size: 0.85rem;
